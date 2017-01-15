@@ -1,0 +1,45 @@
+.user_bar {
+  width: 25%;
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  .card {
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    margin-bottom: 2em;
+  }
+}
+
+.user_content {
+  width: 75%;
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.card-block {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
+
+.card-block img.avatar {
+  margin-top: -65px;
+  width: 80px;
+  height: 80px;
+  background: rgb(250, 254, 255);
+  border: 2px solid #fff;
+}
+
+
+
