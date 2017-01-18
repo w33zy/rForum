@@ -1,0 +1,12 @@
+<%= render 'shared/logged_in_user' %>
+
+<div class="card user_content">
+  <h1 class="display-4"><%= @forum_thread.subject %></h1>
+  <small class="text-muted">Posted by: <%= @forum_thread.user.email %></small>
+  <hr>
+  <p class="lead">
+    <%= @forum_post.body %>
+  </p>
+
+
+</div>
