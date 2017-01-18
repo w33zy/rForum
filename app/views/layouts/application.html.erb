@@ -18,16 +18,19 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Account</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Logout</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+            </li>                        
+            <% if user_signed_in? %>
+              <li class="nav-item">
+                <%= link_to 'New Thread', new_forum_thread_path, class: 'nav-link' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Logout', destroy_user_session_path, class: 'nav-link', method: :delete %>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <%= link_to 'Login', new_user_session_path, class: 'nav-link' %>
+              </li>
+            <% end %>
           </ul>
           <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search">
